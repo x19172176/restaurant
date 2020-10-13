@@ -2,11 +2,8 @@
 
 <h1>Products</h1>
 
-<table class="table table-dark">
+<table>
   <thead>
-  <style>
-.hideextra { white-space: nowrap; overflow: hidden; text-overflow:ellipsis; }
-</style>
     <tr>
       <th>Name</th>
       <th>Description</th>
@@ -28,7 +25,7 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.name %></td>
-        <td><div class="hideextra" style="width:200px"><%= product.description %></div></td>
+        <td><%= product.description %></td>
         <td><%= product.price %></td>
         <td><%= product.dairy_free %></td>
         <td><%= product.gluten_free %></td>

@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[show edit update destroy]
+  before_action :check_categories, only: %i[new create edit]
 
   # GET /products
   # GET /products.json
@@ -23,7 +24,7 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-    @product.category = Category.find_by_id(params[:product][:category_id])
+    @product.category = Category.find(params[:product][:category_id])
 
     respond_to do |format|
       if @product.save
@@ -62,10 +63,15 @@ class ProductsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_product
-      @product = Product.find(params[:id])
-    end
+
+  def check_categories
+    redirect_to new_category_path if Category.count == 0
+  end
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_product
+    @product = Product.find(params[:id])
+  end
 
     # Only allow a list of trusted parameters through.
     def product_params
