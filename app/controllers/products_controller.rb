@@ -64,6 +64,7 @@ class ProductsController < ApplicationController
 
   private
 
+
   def check_categories
     redirect_to new_category_path if Category.count == 0
   end

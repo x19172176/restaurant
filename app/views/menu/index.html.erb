@@ -1,6 +1,7 @@
 <div class="menu-container">
 	<div class="row">
 		<div class="col-12">
+		<%= render 'layouts/title'%>
 				<%= form_tag(search_path, method: "get", remote: true) do %>
 				<div class="input-group mb-5">
 					<div class="col-8" style="padding:0">
@@ -27,8 +28,4 @@
 		</div>
 	</div>
 	
-	<script>
-	function clickSubmit() {
-		$("#search_submit").trigger("click");
-	}
-	</script>
+

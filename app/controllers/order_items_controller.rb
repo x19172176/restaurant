@@ -7,6 +7,7 @@ before_action :set_order
   session[:order_id] = @order.id
   end
 
+
   def update
  @order_item = @order.order_items.find(params[:id])
  @order_item.update_attributes(order_params)
@@ -27,4 +28,6 @@ before_action :set_order
   def set_order
   @order = current_order
   end
+
 end
+
