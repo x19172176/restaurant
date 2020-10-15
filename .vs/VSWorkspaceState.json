@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\assets",
+    "\\app\\assets\\config",
+    "\\app\\helpers",
+    "\\app\\views",
+    "\\app\\views\\cart",
+    "\\app\\views\\charges",
+    "\\config",
+    "\\config\\initializers"
+  ],
+  "SelectedNode": "\\app\\assets\\config\\manifest.js",
+  "PreviewInSolutionExplorer": false
+}

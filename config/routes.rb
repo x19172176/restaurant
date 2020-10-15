@@ -7,6 +7,7 @@ resources :order_items
   get 'menu', to: 'menu#index'
   devise_for :users
   resources :products
+  resources :charges
   root 'pages#home'
   get 'catering', to: 'pages#catering'
   get 'info', to: 'pages#info'
